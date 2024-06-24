@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 1000px;
+            overflow: hidden;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            background-color: #eeeeee;
+            border: 1px solid #bbbbbb;
+            list-style: none;
+        }
+        #first, #third{
+            width: 150px;
+            float: left;
+        }
+        #second{
+            width: 600px;
+            float: left;
+        }
+        li:first-child, li:last-child{
+            height: 150px;
+        }
+        li:nth-child(2){
+            height: 300px;
+        }
+        #first li:first-child{
+            border-radius: 20px 0 20px 0;
+        }
+        #first li:nth-child(2){
+            border-radius: 0 20px 20px 0;
+        }
+        #first li:last-child{
+            border-radius: 0 20px 0 20px;
+        }
+        #second li:first-child{
+            border-radius: 0 0 20px 20px;
+        }
+        #second li:nth-child(2){
+            border-radius: 20px 20px 20px 20px;
+        }
+        #second li:last-child{
+            border-radius: 20px 20px 0 0;
+        }
+        #third li:first-child{
+            border-radius: 0 20px 0 20px;
+        }
+        #third li:nth-child(2){
+            border-radius: 20px 0 0 20px;
+        }
+        #third li:last-child{
+            border-radius: 20px 0 20px 0;
+        }
+        #inside{
+            padding: 10px;
+        }
+        span{
+            font-weight: bold;
+            padding: 43px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul id="first">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul id="second">
+            <li></li>
+            <li>
+                <div id="inside">
+                    <span>menu1</span>
+                    <span>menu2</span>
+                    <span>menu3</span>
+                    <span>menu4</span>
+                    <h1>하이서울브랜드</h1>
+                    ?????????????????????????????????????
+                    ?????????????????????????????????????
+                    ?????????????????????????????????????
+                    ?????????????????????????????????????
+                </div>                
+            </li>
+            <li></li>
+        </ul>
+        <ul id="third">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
