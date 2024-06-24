@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content{
+            width: 300px;         
+        }
+        ul>li{
+            border: 1px solid violet;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: #dddddd;
+            list-style: none;
+            text-align: center;
+            padding: 10px;
+            /* padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px; */
+        }
+        ul li:first-child{
+            background-color: blueviolet;
+            border-radius: 10px 10px 0 0;
+        }
+        ul li:last-child{
+            background-color: red;
+            border-radius: 0 0 10px 10px;
+        }
+        ul li:nth-child(2n+3){
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+            <li><a href="#">메뉴6</a></li>
+            <li><a href="#">메뉴7</a></li>
+            <li><a href="#">메뉴8</a></li>
+        </ul>
+    </div>
+</body>
+</html>

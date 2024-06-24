@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3~div{
+            color: tomato;
+        }
+        h3+div{
+            color: lawngreen;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        #title~div{
+            background-color: azure;
+        }
+        /*나중에 나온게 나중에 적용
+        +는 바로 아래에 없으면 적용안됨
+        ~는 이후 것만 적용*/
+    </style>
+</head>
+<body>
+    <div>div_ex</div>
+    <h1>시작부분</h1>
+    <h3 id="title">동위 선택자(+, ~)</h3>
+    <div>div_01</div>
+    <div>div_02</div>
+    <div>div_03</div>
+    <div>div_04</div>
+    <div>div_05</div>
+</body>
+</html>
