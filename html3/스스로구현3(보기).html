@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header, #content, #footer{
+            width: 1000px;
+            margin: 0 auto;    /* 화면중앙정렬 */
+            overflow: hidden;
+        }
+        #header .left, #content .left, #footer .left{
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-color: #f3f3f3;
+            border: 1px solid #cccccc;
+        }
+        #header .center, #content .center, #footer .center{
+            float: left;
+            width: 694px;
+            height: 150px;
+            background-color: #f3f3f3;
+            border: 1px solid #cccccc;
+        }
+        #header .right, #content .right, #footer .right{
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-color: #f3f3f3;
+            border: 1px solid #cccccc;
+        
+        }
+        #header .left, #footer .right{
+            border-radius: 30px 0;
+        }
+        #header .right, #footer .left{
+            border-radius: 0 30px;
+        }
+        #content .left{
+            border-radius: 0 30px 30px 0;
+            height: 300px;
+        }
+        #content .right{
+            border-radius: 30px 0 0 30px;
+            height: 300px;
+        }
+        #header .center{
+            border-radius: 0 0 30px 30px;
+        }
+        #footer .center{
+            border-radius: 30px 30px 0 0;
+        }
+        #content .center{
+            border-radius: 30px;
+            height: 300px;
+        }
+        #content .center ul li{
+            list-style: none;
+            float: left;
+            font-weight: bold;
+            font-size: 20px;
+            padding:0 40px;
+        }
+        #content .hiseoul{
+            clear: both;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="left">1</div>
+        <div class="center">2</div>
+        <div class="right">3</div>
+    </div>
+
+    <div id="content">
+        <div class="left">4</div>
+        <div class="center">
+            <div>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                </ul>
+            </div>
+            <div class="hiseoul">
+                <h1>하이서울브랜드</h1>
+                <p>서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이서울브랜드 사업은
+                    우수한 기술력과 상품력을 보유하고 있으나 고유브랜드 육성에 어려움을 겪고
+                    있는 우수기업들이 서울시가 인정한 중소기업 공동브랜드인 하이서울브랜드를
+                    활용하여 제품 경쟁력을 강화할 수 있도록 각종 홍보 마케팅을 지원하는
+                    사업입니다.</p>
+            </div>
+        </div>
+        <div class="right">6</div>
+    </div>
+
+    <div id="footer">
+        <div class="left">7</div>
+        <div class="center">8</div>
+        <div class="right">9</div>
+    </div>
+</body>
+</html>
