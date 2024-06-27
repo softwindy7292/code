@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #out{
+            width: 400px;
+            height: 200px;
+            border: 2px solid green;
+            position: relative;
+        }
+        #in{
+            width: 200px;
+            height: 100px;
+            border: 2px solid green;
+            position: absolute;
+            right: 0;
+            top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>position: absolute;</h1>
+    <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed):</p>
+
+    <div id="out">relative
+        <div id="in">absolute</div>
+    </div>
+</body>
+</html>
