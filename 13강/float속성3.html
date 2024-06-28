@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        #header{
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin: 5px;
+        }
+        #navi{
+            height: 100px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #ccc;
+            margin: 5px;
+        }
+        #navi div:first-child~div{
+            width: 130px;
+            height: 40px;
+            float: left;
+            border: 1px solid #ccc;
+            line-height: 42px;            
+        }
+        #navi div:nth-child(2){
+            margin-left: 64px;
+        }
+        #container{
+            border: 1px solid #ccc;
+            height: 300px;
+            margin: 5px;
+            padding: 5px;
+        }
+        #container #content{
+            border: 1px solid #ccc;
+            width: 78%;
+            height: 280px;
+            margin: 5px;
+            float: left;
+            text-align: center;
+            padding-top: 5px;
+        }
+        #container #banner{
+            border: 1px solid #ccc;
+            width: 18.9%;
+            height: 280px;
+            margin: 5px;
+            float: left;
+            text-align: center;
+            padding-top: 5px;
+        }
+        #footer{
+            border: 1px solid #ccc;
+            margin: 5px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">HEADER</div>
+        <div id="navi">
+            <div>NAVIGATION</div>
+            <div>menu1</div>
+            <div>menu2</div>
+            <div>menu3</div>
+            <div>menu4</div>
+            <div>menu5</div>
+        </div>
+        <div id="container">
+            <div id="content">CONTENT</div>
+            <div id="banner">BANNER</div>
+        </div>
+        <div id="footer">FOOTER</div>
+    </div>
+</body>
+</html>
