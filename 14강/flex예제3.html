@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .flex-container {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+        }
+
+        .flex-container > div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .flex-container2 {
+            display: flex;
+            align-items: stretch;
+            background-color: #f1f1f1;
+        }
+
+        .flex-container2 > div {
+            background-color: DodgerBlue;
+            color: white;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The flex-shrink Property</h1>
+
+    <p>Do not let the third flex item shrink as much as the other flex items:</p>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div style="flex-shrink: 2">2</div>  <!-- shrink는 값이 높은 태그가 먼저 작아짐 -->
+        <div style="flex-shrink: 0">3</div>  <!-- 기본값 1 -->
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+    <br>
+    <div class="flex-container2">
+        <div>1</div>
+        <div style="flex: 0 0 200px;">2</div>  <!-- grow, shrink, basis -->
+        <div style="flex-basis:200px">3</div>  <!-- 주고싶은 width부여 -->
+        <div style="flex-basis:500px">4</div>
+    </div>
+</body>
+</html>
