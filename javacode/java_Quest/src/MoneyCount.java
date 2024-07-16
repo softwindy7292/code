@@ -8,36 +8,28 @@ public class MoneyCount {
 		
 		money_save = money;
 		
-		count = money_save / 50000;
-		five_man = count;
+		five_man = money_save / 50000;
 		money_save = money % 50000;
 		
-		count = money_save / 10000;
-		one_man = count;
+		one_man = money_save / 10000;
 		money_save = money % 10000;
 		
-		count = money_save / 5000;
-		five_cheon = count;
+		five_cheon = money_save / 5000;
 		money_save = money % 5000;
 		
-		count = money_save / 1000;
-		one_cheon = count;
+		one_cheon = money_save / 1000;
 		money_save = money % 1000;
 		
-		count = money_save / 500;
-		five_back = count;
+		five_back = money_save / 500;
 		money_save = money % 500;
 		
-		count = money_save / 100;
-		one_back = count;
+		one_back = money_save / 100;
 		money_save = money % 100;
 		
-		count = money_save / 50;
-		five_ship = count;
+		five_ship = money_save / 50;
 		money_save = money % 50;
 		
-		count = money_save / 10;
-		one_ship = count;
+		one_ship = money_save / 10;
 		money_save = money % 10;
 		
 		System.out.println("오만원: " + five_man + "장");
