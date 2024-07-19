@@ -4,7 +4,7 @@ public class MoneyCount {
 	public static void main(String[] args) {
 		int money = 126870;
 		int five_man, one_man, five_cheon, one_cheon, five_back, one_back, five_ship, one_ship;
-		int money_save, count;
+		int money_save;
 		
 		money_save = money;
 		

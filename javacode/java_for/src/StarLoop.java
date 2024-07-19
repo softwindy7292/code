@@ -54,10 +54,11 @@ public class StarLoop {
 		}
 		
 		System.out.println("-----------------------");
+		int star = 6;
 		
-		for(int i = 0;i < 4;i++) {
-			for(int j = 1;j <= 7;j++) {
-				if(4 - i <= j && j <= 4 + i) {
+		for(int i = 0;i < star;i++) {
+			for(int j = 0;j < 2*star-1;j++) {
+				if(star-1-i <= j && j <= star-1+i) {
 					System.out.print("*");
 				}else {
 					System.out.print(" ");
@@ -67,17 +68,18 @@ public class StarLoop {
 		}
 		
 		System.out.println("-----------------------");
+		int star2 = 2*star-1;
 		
-		for(int i = 1;i <= 9;i++) {
-			for(int j = -4;j <= 4;j++) {
-				if(i < 5) {
-					if(i-(i-1) <= i+j && i+j <= i+(i-1)) {
+		for(int i = 0;i < star2;i++) {
+			for(int j = 0;j < star2;j++) {
+				if(i <= star2/2) {
+					if(star2/2-i <= j && j <= star2/2+i) {
 						System.out.print("*");
 					}else {
 						System.out.print(" ");
 					}
 				}else {
-					if(i-((10-i)-1) <= i+j && i+j <= i+((10-i)-1)) {
+					if(star2/2-(star2-1-i) <= j && j <= star2/2+(star2-1-i)) {
 						System.out.print("*");
 					}else {
 						System.out.print(" ");
