@@ -9,7 +9,7 @@ class Gugudan{
 		}
 	}
 }
-public class PrintGugudan {
+public class ClassGugudan {
 
 	public static void main(String[] args) {
 		Gugudan gugudan = new Gugudan();

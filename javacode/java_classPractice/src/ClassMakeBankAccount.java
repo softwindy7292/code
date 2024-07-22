@@ -1,5 +1,19 @@
 class BankAccount{
-	int balance = 0;
+	String accNumber;
+	String ssNumber;
+	int balance;
+	
+	BankAccount(String acc, String ss, int bal){
+		accNumber = acc;
+		ssNumber = ss;
+		balance = bal;
+	}
+	
+	void initBankAccount(String acc, String ss, int bal){
+		accNumber = acc;
+		ssNumber = ss;
+		balance = bal;
+	}
 	
 	public int deposit(int amount) {
 		balance += amount;
@@ -26,8 +40,10 @@ class BankAccount{
 public class ClassMakeBankAccount {
 
 	public static void main(String[] args) {
-		BankAccount kim = new BankAccount();
-		BankAccount lee = new BankAccount();
+		BankAccount kim = new BankAccount("7746-12-22", "1359823", 10000);
+		BankAccount lee = new BankAccount("7746-12-22", "1359823", 10000);
+		
+		kim.initBankAccount("1294-11-23", "2086454", 10000);
 		
 		kim.deposit(20000);
 		lee.deposit(30000);
@@ -40,7 +56,7 @@ public class ClassMakeBankAccount {
 		
 		kim.checkBalance(kim);
 		
-		BankAccount ref1 = new BankAccount();
+		BankAccount ref1 = new BankAccount("none", "none", 0);
 		BankAccount ref2 = ref1;
 		
 		ref1.deposit(3000);

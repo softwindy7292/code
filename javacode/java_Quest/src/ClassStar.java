@@ -21,7 +21,7 @@ class Star{
 		}
 	}
 }
-public class PrintStar {
+public class ClassStar {
 
 	public static void main(String[] args) {
 		Star star = new Star();

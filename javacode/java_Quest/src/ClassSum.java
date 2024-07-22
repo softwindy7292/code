@@ -9,7 +9,7 @@ class Sum{
 		return sum;
 	}
 }
-public class MakeSum {
+public class ClassSum {
 
 	public static void main(String[] args) {
 		Sum sum = new Sum();

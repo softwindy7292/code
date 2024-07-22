@@ -1,4 +1,3 @@
-
 class Grade{
 	int kor, math, eng;
 	double avg;
