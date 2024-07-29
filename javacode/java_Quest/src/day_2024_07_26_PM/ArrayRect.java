@@ -1,4 +1,4 @@
-package day_2024_07_26_Q;
+package day_2024_07_26_PM;
 
 import java.util.Scanner;
 
