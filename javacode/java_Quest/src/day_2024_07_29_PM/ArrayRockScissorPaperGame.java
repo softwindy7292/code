@@ -3,9 +3,9 @@ package day_2024_07_29_PM;
 import java.util.Scanner;
 
 class RockScissorPaper{
+	public static final String arrRSP[] = {"가위", "바위", "보"};
 	private String answer;
 	private int randInt, myInt;
-	String arrRSP[] = {"가위", "바위", "보"};
 	Scanner sc = new Scanner(System.in);
 	
 	public void run() {
