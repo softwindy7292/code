@@ -26,7 +26,7 @@ select '22/02/01', last_day('22/02/01') from dual;
 select sysdate, to_char(sysdate, 'YYYY-MM-DD HH24:MI:SS') from dual;
 select hiredate, to_char(hiredate, 'YYYY/MM/DD day') from emp;
 
-select ename, sal, to_char(sal, 'L999,999') from emp;
+select ename, to_char(sal, 'L999,999') as salary from emp;
 
 select ename, hiredate from emp where hiredate = to_date(19810220, 'YYYYMMDD');
 

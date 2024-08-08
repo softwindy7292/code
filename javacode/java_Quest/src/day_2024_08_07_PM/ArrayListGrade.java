@@ -14,7 +14,7 @@ public class ArrayListGrade {
 		System.out.print("학점 6개를 띄어쓰기 해서 순서대로 입력 >> ");
 		Scanner sc = new Scanner(System.in);
 		
-		while(grade.size() < GRADENUM) {		
+		while(grade.size() < GRADENUM) {
 			grade.add(sc.next());
 		}
 		
