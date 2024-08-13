@@ -32,8 +32,6 @@ public class Star1 extends HttpServlet {
 		
 		int star = Integer.valueOf(request.getParameter("star"));
 
-
-
 		out.print("<html>");
 		out.print("<body>");
 		out.print("<h1>");
