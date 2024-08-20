@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var kor = parseFloat(prompt("국어"));
-        var math = parseFloat(prompt("수학"));
-        var eng = parseFloat(prompt("영어"));
-        var sum = kor + math + eng;
+        let kor = parseFloat(prompt("국어"));
+        let math = parseFloat(prompt("수학"));
+        let eng = parseFloat(prompt("영어"));
+        let sum = kor + math + eng;
+        let avg = sum/3;
 
         document.write("총점: " + sum + "<br>");
-        document.write("평균: " + sum/3 + "<br>");
+        document.write("평균: " + avg + "<br>");
+
+        if(avg >= 90){
+            document.write("성적: 수" + "<br>");
+        }else if(avg >= 80){
+            document.write("성적: 우" + "<br>");
+        }else if(avg >= 70){
+            document.write("성적: 미" + "<br>");
+        }else if(avg >= 60){
+            document.write("성적: 양" + "<br>");
+        }else{
+            document.write("성적: 가" + "<br>");
+        }
     </script>
 </head>
 <body>

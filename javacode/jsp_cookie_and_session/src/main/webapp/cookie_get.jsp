@@ -10,9 +10,9 @@
 	<%
 		Cookie[] cookies = request.getCookies();
 	   	
-	   	for(int i=0; i<cookies.length;i++){
-	   		out.println("쿠키 이름:" +  cookies[i].getName() + "<br/>");
-	   		out.println("쿠키 값:" +  cookies[i].getValue() + "<br/>");
+	   	for(int i = 0; i < cookies.length;i++){
+	   		out.println("쿠키 이름: " + cookies[i].getName() + "<br>");
+	   		out.println("쿠키 값: " + cookies[i].getValue() + "<br>");
 	   		out.println("=====================<br />");
 	   	}	
 	%>
