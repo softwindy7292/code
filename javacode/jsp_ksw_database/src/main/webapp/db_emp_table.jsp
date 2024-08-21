@@ -1,3 +1,4 @@
+<%@page import="java.sql.ResultSetMetaData"%>
 <%@page import="java.sql.Date"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
@@ -13,9 +14,9 @@
 </head>
 <body>
 	<%
-		Connection connection;
-		Statement statement;
-		ResultSet rs;
+		Connection connection = null;
+		Statement statement = null;
+		ResultSet rs = null;
 		
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -30,16 +31,15 @@
 			statement = connection.createStatement();
 			rs = statement.executeQuery(query);
 			
+			ResultSetMetaData rsmd = rs.getMetaData();
+			
 			out.print("<table border=1>");
 			out.print("<tr>");
-			out.print("<td>사원번호</td>");
-			out.print("<td>사원이름</td>");
-			out.print("<td>직종</td>");
-			out.print("<td>매니저</td>");
-			out.print("<td>입사일</td>");
-			out.print("<td>급여</td>");
-			out.print("<td>커미션</td>");
-			out.print("<td>부서번호</td>");
+			
+			for(int i = 1; i <= rsmd.getColumnCount(); i++){
+				out.print("<td>" + rsmd.getColumnName(i) + "</td>");
+			}
+			
 			out.print("</tr>");
 			while(rs.next()){
 				int empno = rs.getInt("empno");
@@ -64,8 +64,21 @@
 			}
 			out.print("</table>");
 			
-		}catch(Exception e){}
-		finally{}
+		}catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+			rs.close();
+
+				if (statement != null)
+			statement.close();
+
+				if (connection != null)
+			connection.close();
+
+			} catch (Exception e) {}
+		}
 	%>
 </body>
 </html>

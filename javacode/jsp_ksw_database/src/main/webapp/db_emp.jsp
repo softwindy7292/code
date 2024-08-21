@@ -13,9 +13,9 @@
 </head>
 <body>
 	<%
-		Connection connection;
-		Statement statement;
-		ResultSet rs;
+		Connection connection = null;
+		Statement statement = null;
+		ResultSet rs = null;
 		
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -51,8 +51,21 @@
 				out.print("<br>");
 			}
 			
-		}catch(Exception e){}
-		finally{}
+		}catch(Exception e){
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+			rs.close();
+
+				if (statement != null)
+			statement.close();
+
+				if (connection != null)
+			connection.close();
+
+			} catch (Exception e) {}
+		}
 	%>
 </body>
 </html>
