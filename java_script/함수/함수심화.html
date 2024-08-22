@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function funName(){
+            return function(x){
+                for(let i = 1; i < 10; i++){
+                    document.write(x + " x " + i + " = " + x*i + "<br>");
+                }
+            };
+        }
+
+        let returnFun = funName();
+        returnFun(7)
+
+        function funGugu(x){
+            let dan = x + "단 실행<br>";
+            
+            return function(){
+                document.write(dan);
+
+                for(let i = 1; i < 10; i++){
+                    document.write(x + " x " + i + " = " + x*i + "<br>");
+                }
+            }
+        }
+
+        let reFun = funGugu(7);
+        reFun()
+
+        function outFun(width, height){
+            document.write(triangle() + "<br>");
+            document.write(rectangle() + "<br>");
+
+            function triangle(){
+                return width * height / 2;
+            }
+
+            function rectangle(){
+                return width * height;
+            }
+        }
+
+        outFun(10, 10);
+
+        function funCallback(funCB){
+            let num = funCB(3,4);
+            document.write(num + "<br>");
+        }
+
+        function add(x,y){
+            return x + y;
+        }
+
+        function sub(x,y){
+            return x - y;
+        }
+
+        function mul(x,y){
+            return x * y;
+        }
+
+        funCallback(add)
+        funCallback(sub)
+        funCallback(mul)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function callback(cb){
+            let x = parseFloat(prompt("첫번째 수"));
+            let y = parseFloat(prompt("두번째 수"));
+            let result = cb(x, y);
+            document.write("결과: " + result + "<br>");
+        }
+
+        function add(x,y){
+            return x + y;
+        }
+
+        function sub(x,y){
+            return x - y;
+        }
+
+        function mul(x,y){
+            return x * y;
+        }
+
+        function div(x,y){
+            if(y == 0){
+                return 0;
+            }
+            return x / y;
+        }
+
+        callback(add)
+        callback(sub)
+        callback(mul)
+        callback(div)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

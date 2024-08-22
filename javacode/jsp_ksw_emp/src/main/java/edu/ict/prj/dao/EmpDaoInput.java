@@ -28,7 +28,7 @@ public class EmpDaoInput {
 	}
 
 	public EmpVO empSelect() {
-		EmpVO vo = new EmpVO();
+		EmpVO vo = null;
 
 		Connection connection = null;
 		Statement statement = null;
@@ -41,21 +41,18 @@ public class EmpDaoInput {
 			statement = connection.createStatement();
 			rs = statement.executeQuery(sql);
 			
-			rs.next();
-			int empno = rs.getInt("empno");
-			String ename = rs.getString("ename");
-			String job = rs.getString("job");
-			int mgr = rs.getInt("mgr");
-			Date hiredate = rs.getDate("hiredate");
-			int sal = rs.getInt("sal");
-			int comm = rs.getInt("comm");
-			int deptno = rs.getInt("deptno");
-			
-			if(empno == 0)
-				return vo;
-			
-			vo = new EmpVO(empno, ename, job, mgr, hiredate, sal, comm, deptno);
-			
+			if(rs.next()) {
+				int empno = rs.getInt("empno");
+				String ename = rs.getString("ename");
+				String job = rs.getString("job");
+				int mgr = rs.getInt("mgr");
+				Date hiredate = rs.getDate("hiredate");
+				int sal = rs.getInt("sal");
+				int comm = rs.getInt("comm");
+				int deptno = rs.getInt("deptno");
+				
+				vo = new EmpVO(empno, ename, job, mgr, hiredate, sal, comm, deptno);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

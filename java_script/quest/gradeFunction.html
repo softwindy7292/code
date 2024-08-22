@@ -8,20 +8,18 @@
         let kor = parseFloat(prompt("국어"))
         let math = parseFloat(prompt("수학"));
         let eng = parseFloat(prompt("영어"));
-        let sum = 0;
-        let avg = 0;
 
-        const getSum = function (){
-            sum = kor + math + eng;
-            return sum;
+        const getSum = function (kor, math, eng){
+            return kor + math + eng;
         }
 
-        const getAvg = function (){
-            avg = sum / 3;
-            return avg;
+        const getAvg = function (kor, math, eng){
+            return getSum(kor, math, eng) / 3;
         }
 
-        const getGrade = function (){
+        const getGrade = function (kor, math, eng){
+            let avg = getAvg(kor, math, eng);
+
             if(avg >= 90){
                 return '수';
             }else if(avg >= 80){
@@ -35,9 +33,9 @@
             }
         }
 
-        document.write("총점: " + getSum() + "<br>");
-        document.write("평균: " + getAvg ()+ "<br>");
-        document.write("성적: " + getGrade() + "<br>");
+        document.write("총점: " + getSum(kor, math, eng) + "<br>");
+        document.write("평균: " + getAvg (kor, math, eng)+ "<br>");
+        document.write("성적: " + getGrade(kor, math, eng) + "<br>");
     </script>
 </head>
 <body>
