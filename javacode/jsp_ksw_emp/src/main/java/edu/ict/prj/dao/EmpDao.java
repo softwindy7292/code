@@ -25,7 +25,7 @@ public class EmpDao {
 		}
 	}
 
-	public List<EmpVO> deptSelect() {
+	public List<EmpVO> empSelect() {
 		List<EmpVO> vos = new ArrayList<>();
 
 		Connection connection = null;

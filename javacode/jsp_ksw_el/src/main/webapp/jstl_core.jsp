@@ -16,7 +16,8 @@
 	<br> ${num2}
 	<br>
 
-	<c:set var="result" value="${num1 + num2}" />
+	<c:set var="result" value
+	="${num1 + num2}" />
 	${result}
 	<br>
 
@@ -55,16 +56,29 @@
 	<hr>
 	<h3>choose when</h3>
 	<c:choose>
-		<%-- 이 주석만 가능하다. 읽히지 않는 주석이라. 하지만 다른 주석 쓰면 에러가 난다. choose다음엔 when을 쓸 것 --%>
+		<%-- choose 다음엔 when 을 쓸 것 --%>
 		<c:when test="${num1 > 5}">
     		num1이 5보다 크다
 		</c:when>
 		<c:when test="${num2 < 100}">
     		num2가 100보다 작다
    		</c:when>
-		<c:otherwise>
+		<c:otherwise>s
     		num1이 5보다 크지도 100보다 작지도 않다.
 		</c:otherwise>
 	</c:choose>
+	
+	<hr>
+	<c:forEach var="i" begin="1" end="10" step="2">
+		<p>안녕하세요 + ${i}</p>
+	</c:forEach>
+	
+	<c:forEach var="i" begin="1" end="6">
+		<h${i}>안녕하세요</h${i}>
+	</c:forEach>
+	
+	
+	
+	
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Airplane(name, color, speed){
+            this.name = name;
+            this.color = color;
+            this.speed = speed;
+            this.fly = function(){
+                return this.speed + "fly!!";
+            }
+        };
+
+        let voing747 = new Airplane("보잉747", "흰색", "600km/h");
+        document.write(voing747.fly() + "<br>");
+        document.write(typeof(voing747) + "<br>");
+        document.write(typeof(Airplane) + "<br>");
+        console.log(voing747);
+
+
+        function Grade(kor, math, eng){
+            this.kor = kor;
+            this.math = math;
+            this.eng = eng;
+            this.getTotal = function(){
+                return this.kor + this.math + this.eng;
+            }
+            this.getAvg = function(){
+                return this.getTotal() / 3;
+            }
+        }
+
+        let grade = new Grade(90,60,70);
+        document.write(grade.getTotal()+"<br>")
+        document.write(grade.getAvg()+"<br>")
+
+        function Recangle(width, height){
+            this.width = width;
+            this.height = height;
+            this.getArea = function(){
+                return this.width * this.height;
+            }
+        }
+
+        let rec = new Recangle(10,10);
+        document.write(rec.getArea()+"<br>")
+
+        function Circle(radius){
+            this.radius = radius;
+            this.getArea = function(){
+                return this.radius * this.radius * Math.PI;
+            }
+        }
+
+        let circle = new Circle(10);
+        document.write(circle.getArea()+"<br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

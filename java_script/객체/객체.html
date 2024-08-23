@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let funName = function(){}
+        document.write(typeof funName + "<br>");
+
+        let objName = {};
+        document.write(typeof objName + "<br>");
+
+        let objData = {
+            num : 123,
+            str : "abc",
+            boo : true,
+            obj : {},
+            arr : [1, 2, 3],
+            und : undefined
+        };
+
+        console.log(objData);
+
+        let objCar = {
+            width : "3m",
+            height : "2m",
+            energy : 100,
+            speed : function(){
+                return energy * 100;
+            }
+        };
+        document.write(objCar.width + "<br>");
+        document.write(objCar.height + "<br>");
+
+        objCar.width = "10m"
+        objCar.height = "5m"
+        document.write(objCar.width + "<br>");
+        document.write(objCar.height + "<br>");
+
+
+        let grade = {
+            kor : 0,
+            math : 0,
+            eng : 0,
+            getTotal : function(){
+                return this.kor + this.math + this.eng;
+            },
+            getAvg : function(){
+                return this.getTotal() / 3;
+            }
+        };
+
+        console.log(grade.kor);
+        console.log(grade["kor"]);
+
+        let print = "";
+        for(let key in grade){
+            print = key + ":" + grade[key];
+            document.write(print + "<br>");
+        }
+
+        grade.science = 100;
+        document.write(grade.science + "<br>");
+
+        delete grade.kor;        
+        document.write(grade.kor + "<br>");
+        // grade.eng = Number( prompt("국어","국어"));
+        // grade.kor = Number( prompt("영어","영어"));
+        // grade.math = Number( prompt("수학","수학"));
+
+        // document.write(grade.getTotal() + "<br>");
+        // document.write(grade.getAvg() + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
