@@ -15,8 +15,7 @@ public class BoardVO {
 	
 	public BoardVO() {}	
 	
-	public BoardVO(int bid, String bname, String btitle, String bcontent, Timestamp bdate, int bhit, int bgroup,
-			int bstep, int bindent) {		
+	public BoardVO(int bid, String bname, String btitle, String bcontent, Timestamp bdate, int bhit, int bgroup, int bstep, int bindent) {		
 		this.bid = bid;
 		this.bname = bname;
 		this.btitle = btitle;

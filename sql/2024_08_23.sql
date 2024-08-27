@@ -23,3 +23,5 @@ values (mvc_board_seq.nextval, 'test' , '테스트', '테스트', 0, mvc_board_seq.cur
 select * from mvc_board;
 
 commit;
+
+update mvc_board  set bname = '김선우', btitle = '에헤이', bcontent = '성공' where bid = 22;
