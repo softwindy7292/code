@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cEvent{
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: red;
+            color: #fff;
+            font-weight: bolder;
+        }
+        #dbEvent{
+            width: 200px; height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: red;
+            color: #fff;
+            font-weight: bolder;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            // let cTag = document.getElementById("cEvent");
+            let cTag = document.querySelector("#cEvent");
+
+            cTag.onclick = function(){
+                if(cTag.style.background == "red"){
+                    cTag.style.background = "yellow";
+                }else if(cTag.style.background == "yellow"){
+                    cTag.style.background = "red";
+                }
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="cEvent">클릭 이벤트</div><br>
+    <div id="dbEvent" ondblclick="headerdbClick()">더블클릭 이벤트</div>
+</body>
+<script>
+    function headerdbClick(){
+        let dbTag = document.getElementById("dbEvent");
+        dbTag.style.background = "#00f";
+    }
+</script>
+</html>

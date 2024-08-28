@@ -275,7 +275,7 @@ public class BoardDao {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
-		String sql = "insert into mvc_board (bId, bName, bTitle, bContent, bGroup, bStep, bIndent) values (mvc_board_seq.nextval, ?, ?, ?, ?, ?, ?)";
+		String sql = "insert into mvc_board (bId, bName, bTitle, bContent, bHit, bGroup, bStep, bIndent) values (mvc_board_seq.nextval, ?, ?, ?, 0, ?, ?, ?)";
 		
 		int rn = 0;
 		
@@ -309,7 +309,7 @@ public class BoardDao {
 		return rn;
 	}
 
-	public int modify(String bid, String bname, String btitle, String bcontent) {
+	public int modify(String id, String bname, String btitle, String bcontent) {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
@@ -325,7 +325,40 @@ public class BoardDao {
 			preparedStatement.setString(1, bname);
 			preparedStatement.setString(2, btitle);
 			preparedStatement.setString(3, bcontent);
-			preparedStatement.setInt(4, Integer.valueOf(bid));
+			preparedStatement.setInt(4, Integer.valueOf(id));
+			
+			rn = preparedStatement.executeUpdate();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(preparedStatement != null)
+					preparedStatement.close();
+				if(connection != null)
+					connection.close();
+			} catch (Exception e2) {
+				
+			}
+		}
+		
+		return rn;
+	}
+	
+	public int upHit(String id) {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		String sql = "update mvc_board set bhit = bhit + 1 where bid = ?";
+		
+		int rn = 0;
+		
+		try {
+			
+			connection = dataSource.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			
+			preparedStatement.setInt(1, Integer.valueOf(id));
 			
 			rn = preparedStatement.executeUpdate();
 			
