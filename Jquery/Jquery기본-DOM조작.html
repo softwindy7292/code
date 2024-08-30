@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            let wrapObj = $("#wrap");
+
+            let divObj = $("<div> Hello jQuery! </div>");
+            divObj.css("background", "#0000ff");
+
+            divObj.appendTo(wrapObj);
+
+            let aObj = $("<a href='http://www.google.com' target='_blank'> google </a><br>");
+            aObj.appendTo(wrapObj);
+
+            let imgObj = $("<img src='img/logo.png'><br>")
+            imgObj.appendTo(wrapObj);
+
+            let tempObj = {
+                src: "img/logo.png",
+                width: 297,
+                height: 124,
+                border: "5px"
+            }
+
+            imgObj = $("<img>", tempObj);
+            imgObj.appendTo(wrapObj);
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+
+    </div>
+</body>
+</html>
