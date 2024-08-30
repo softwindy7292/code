@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let arr = [];
+            arr[0] = '하나';
+            arr[1] = '둘';
+            arr[2] = '셋';
+
+            arr.push("밥먹기");
+            arr.push("운동하기");
+            
+            arr.splice(2,1); //원하는  배열 위치에서 원하는 개수 삭제
+            arr.pop();  //마지막 배열 삭제
+            arr.shift();  //첫 번째 배열 삭제
+
+            delete arr[1]; //배열 내부 값을 삭제
+            
+            for(let i = 0; i < arr.length; i++){
+                document.write(arr[i] + "<br>");
+            }
+
+            document.write("배열 개수 출력: " + arr.length + "<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

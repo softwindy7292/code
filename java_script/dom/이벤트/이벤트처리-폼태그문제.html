@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let c = document.querySelector("#count");
+            let plusBtn = document.querySelector("#plus");
+            let minusBtn = document.querySelector("#minus");
+            
+            plusBtn.addEventListener("click", function(){
+                c.value = Number(c.value) + 1;
+            })
+
+            minusBtn.addEventListener("click", function(){
+                if(c.value <= 0){
+                    c.value = 0;
+                    alert("최소수량은 1 입니다.")
+                }else{
+                    c.value = c.value - 1;
+                }                
+            })
+        }
+        function change(){
+            let text = document.querySelector("#areaBoard").value;
+            document.querySelector("#result").innerHTML = text.length;
+        }
+    </script>
+</head>
+<body>
+    <form id="countForm">
+        <textarea id="areaBoard" rows="10" cols="10" onkeydown="change()"></textarea><br>
+        입력문자수:<span id="result"></span>
+
+        <hr>
+
+        갯수 <input id="count" type="text" name="count" value="0">
+        <input id="plus" type="button" value="+">
+        <input id="minus" type="button" value="-">
+    </form>
+</body>
+</html>
