@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).on("click", "#hello", function(){
+                alert("Hello jQuery!");
+            })
+
+            let wrapObj = $("#wrap");
+        
+            let divObj = $("<div id='hello'> Hello jQuery! </div>");
+            divObj.css("background","#cccccc");
+            
+            divObj.appendTo(wrapObj);
+            
+            // $("#hello").click(function(){
+            //     alert("Hello jQuery!");
+            // });
+        });
+
+        $(document).ready(function () {
+            $("#hello2").click(function(){
+                alert("안녕하세요");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="hello2">안녕하세요</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                let v1 = $("#v1").val();
+                let v2 = $("#v2").val();
+                let result = Number(v1) + Number(v2);
+
+                $("#result").val(result);
+            });
+
+            $("#quantity").change(function(){
+                let price = $("#price").val();
+                let count = $(this).val();
+                let result = Number(price) * Number(count);
+
+                $("#total").text(result);
+            });
+
+            $("#add").click(function(){
+                let uList = $("#uList");
+                let word = $("#words").val();
+
+                if(word == "")
+                    return;
+
+                let list = $("<li>" + word + "</li>");
+
+                list.appendTo(uList);
+            });
+
+            $("#del").click(function(){
+                let uList = $("#uList");
+
+                uList.remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>1. +연산</h1>
+    <input type="number" id="v1" value="10"> +
+    <input type="number" id="v2" value="20"> =
+    <input type="text" id="result" value="">
+    <button id="btn">연산</button><br>
+    <hr>
+    <h1>2. 총합 구하기</h1>
+    가격<input type="text" id="price" value="2500"> X
+    수량<select id="quantity">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    총합:<span id="total"></span>
+    <hr>
+    <input type="text" id="words">
+    <button type="button" id="add" >추가</button>
+    <button type="button" id="del" >삭제</button><br>
+    <ui id="uList"></ui>
+</body>
+</html>
