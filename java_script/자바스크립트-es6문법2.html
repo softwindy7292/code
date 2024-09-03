@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        //let -> 변수 영역을 코드블록 안으로 한정
+        let study = "자바스크립트";
+
+        if(study){
+            let study = "리액트";
+            console.log("공부하자", study);
+        }
+        console.log("재밌다", study);
+
+        
+        //문자열 템플릿
+        console.log(study + " " + "아아아");
+        console.log(`${study} 아아아`);
+
+
+        //디폴트 파라미터
+        function activity(name = "홍길동", act = "서핑"){
+            console.log(`${name}은 ${act}을 좋아합니다.`);
+        }
+        activity();
+        activity("은", "한");
+
+
+        //화살표 함수
+        let lordfy = (name) => {
+            return `열심히 공부하는 ${name}`;
+        }
+
+        let add = (a, b) => {
+            return a + b;
+        }
+
+        console.log(lordfy("바둑"));
+        console.log(add(1, 2));
+
+
+        //ES6 객체와 배열
+        //1. 구조 분해
+        let sandwich = {
+            bread : "플랫브레드",
+            meat : "슬라이스 햄",
+            topping : ["치즈", "양상추", "토마토"]
+        }
+
+        let makeSandwich = function({bread, meat}){
+            document.write(bread + "<br>");
+            document.write(meat + "<br>");
+        }
+
+        makeSandwich(sandwich);
+
+        // let {bread, meat} = sandwich;
+        // bread = "식빵";
+        // meat = "베이컨";
+
+        // document.write(bread + "<br>");
+        // document.write(meat + "<br>");
+        // document.write(sandwich.bread + "<br>");
+        // document.write(sandwich.meat + "<br>");
+
+        var arr = ["용평", "평창", "홍천"];
+        document.write(arr[0] + "<br>");
+        document.write(arr[1] + "<br>");
+
+        var [arr1, , arr3] = ["용평", "평창", "홍천"];
+        document.write(arr1 + "<br>");
+        //document.write(arr2 + "<br>");
+        document.write(arr3 + "<br>");
+
+
+        //ES6 객체 리터럴 개선(object literal enhancemant)
+        let name = "백두산";
+        let elevation = "2744";
+
+        let hiking = {name, elevation};
+
+        document.write(hiking.name + "<br>");
+        document.write(hiking.elevation + "<br>");
+
+
+        //스프레드 연산자
+        let food = ["닭갈비", "닭꼬치", "닭강정"];
+        let drink = ["소주", "맥주"];
+
+        let foodDrink = [...food, ...drink]; //...은 복사
+        console.log(foodDrink);
+        document.write(foodDrink.join("?") + "<br>"); //join을 안쓰면 기본으로 ,
+
+        //응용
+        food = ["닭갈비", "닭꼬치", "닭강정"];
+        let [last] = [...food].reverse();
+
+        document.write(last + "<br>");
+        document.write(food + "<br>");
+
+
+        //클래스
+        class Person{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            print(){
+                console.log(`이름 : ${this.name}, 나이 : ${this.age} `);
+            }
+        }
+
+        let person = new Person("김서운", 24);
+        person.print();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
