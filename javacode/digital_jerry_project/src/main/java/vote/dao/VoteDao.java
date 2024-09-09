@@ -180,7 +180,7 @@ public class VoteDao {
 		//DateTimeFormatter birthdayFormatter = DateTimeFormatter.ofPattern("yyMMdd");
 		DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일");
 
-		String sql = "select * from vote";
+		String sql = "select * from vote where v_area like '%제1투표장%'";
 
 		try {
 
