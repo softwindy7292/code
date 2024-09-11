@@ -27,6 +27,14 @@ public class LoginController {
 		
 		//UserVO user = new UserVO(id, pw);
 		
+		if(user.getId().equals("김선우") && user.getPw().equals("1234")) {
+			return "redirect:/";
+		}
+		
+		if(user.getId().equals("1234") && user.getPw().equals("1234")) {
+			return "redirect:/star/input";
+		}
+		
 		model.addAttribute("user", user);
 		
 		return "login/check";
